@@ -41,7 +41,7 @@ header > a{
     justify-content: center;
 }
 .user-profile-photo{
-    height: 20em;
+    height: 30em;
     width: 20em;
 
     display: flex;
