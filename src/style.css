@@ -42,36 +42,62 @@ header > a{
     display: grid;
     gap: 1em;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fit, 400px);
+    grid-template-rows: repeat(auto-fit, 600px);
 }
 .post{
-    min-height: 400px;
+    min-height: 500px;
     background-color: #ffff;
 
     border-radius: 10px;
 
     display: grid;
-    grid-template-rows: 4fr 1fr;
-    grid-template-areas: 
+    grid-template-rows: 0.5fr 500px 1fr;
+    grid-template-areas:
+    "user" 
     "photo"
     "text";
 
     box-shadow: 15px 10px 18px #888888;
 
 }
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-area: user;
+}
+.image{
+    margin: 10px;
+    height: 30px;
+    width: 30px;
+
+    border-radius: 50%;
+    border: 1px solid gray;
+    background-size: cover;
+    background-position: center;
+}
+
+
 .photo{
     grid-area: photo;
-    border-radius: 10px 10px 0px 0px;
     background-size: cover;
     background-position: center;
 }
 .text{
+    grid-area: text;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: hsl(216, 12%, 8%);
     margin: 0px 10px;
     font-size: clamp( 1em, 5vh , 2em);
 }
+
+button{
+    background:none;
+    border: none;
+}
+
 @media screen and (max-width:800px){
 .contents{
     margin: 10px auto;
