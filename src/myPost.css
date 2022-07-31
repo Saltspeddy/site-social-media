@@ -69,7 +69,7 @@ form{
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 400px 1fr;
 }
 
 form > :nth-child(1){
@@ -84,6 +84,12 @@ label{
     justify-content: center;
     align-items: center;
 }
+label > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 input{
     height: 2em;
     /* width: 20em; */
